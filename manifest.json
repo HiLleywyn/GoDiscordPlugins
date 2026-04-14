@@ -46,6 +46,51 @@
       "files": ["autorole.go"]
     },
     {
+      "name": "raidguard",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Detect join floods and auto-kick or timeout suspected raiders.",
+      "author": "HiLleywyn",
+      "commands": ["raidguard"],
+      "files": ["raidguard.go"]
+    },
+    {
+      "name": "verify",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Gate new members behind a verification step before granting access.",
+      "author": "HiLleywyn",
+      "commands": ["verify"],
+      "files": ["verify.go"]
+    },
+    {
+      "name": "altcheck",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Flag or auto-kick accounts younger than a configured age.",
+      "author": "HiLleywyn",
+      "commands": ["altcheck"],
+      "files": ["altcheck.go"]
+    },
+    {
+      "name": "appeals",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Ban appeal inbox with approve / deny mod review workflow.",
+      "author": "HiLleywyn",
+      "commands": ["appeals", "appeal"],
+      "files": ["appeals.go"]
+    },
+    {
+      "name": "nickfilter",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Block hoisting, zalgo, mention-injection and banned substrings in nicknames.",
+      "author": "HiLleywyn",
+      "commands": ["nickfilter"],
+      "files": ["nickfilter.go"]
+    },
+    {
       "name": "reactionroles",
       "category": "utility",
       "version": "1.0.0",
@@ -107,6 +152,69 @@
       "author": "HiLleywyn",
       "commands": ["highlight", "hl"],
       "files": ["highlight.go"]
+    },
+    {
+      "name": "timezone",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Per-user timezones and a `!when` command for cross-TZ scheduling.",
+      "author": "HiLleywyn",
+      "commands": ["tz", "when"],
+      "files": ["timezone.go"]
+    },
+    {
+      "name": "embed",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Interactive embed builder for announcements and rich messages.",
+      "author": "HiLleywyn",
+      "commands": ["embed"],
+      "files": ["embed.go"]
+    },
+    {
+      "name": "customrole",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Let eligible members claim one personal role from a curated pool.",
+      "author": "HiLleywyn",
+      "commands": ["customrole", "crole"],
+      "files": ["customrole.go"]
+    },
+    {
+      "name": "todo",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Personal task lists per user, with optional due dates.",
+      "author": "HiLleywyn",
+      "commands": ["todo"],
+      "files": ["todo.go"]
+    },
+    {
+      "name": "threadkeeper",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Keep long-running threads from auto-archiving via scheduled heartbeats.",
+      "author": "HiLleywyn",
+      "commands": ["threadkeeper"],
+      "files": ["threadkeeper.go"]
+    },
+    {
+      "name": "channelexport",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Export recent channel messages as a text dump for review or archival.",
+      "author": "HiLleywyn",
+      "commands": ["channelexport", "export"],
+      "files": ["channelexport.go"]
+    },
+    {
+      "name": "backup",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Snapshot and restore plugin configuration for a guild.",
+      "author": "HiLleywyn",
+      "commands": ["backup"],
+      "files": ["backup.go"]
     },
     {
       "name": "starboard",
@@ -179,6 +287,24 @@
       "author": "HiLleywyn",
       "commands": ["quote"],
       "files": ["quote.go"]
+    },
+    {
+      "name": "birthday",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Track member birthdays, wish them happy birthday, and apply a temporary role.",
+      "author": "HiLleywyn",
+      "commands": ["birthday", "bday"],
+      "files": ["birthday.go"]
+    },
+    {
+      "name": "stats",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Server message activity stats with weekly digests.",
+      "author": "HiLleywyn",
+      "commands": ["stats"],
+      "files": ["stats.go"]
     }
   ]
 }
