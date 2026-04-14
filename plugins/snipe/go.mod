@@ -1,4 +1,4 @@
-module github.com/hilleywyn/GoDiscordPlugins/plugins/purge
+module github.com/hilleywyn/GoDiscordPlugins/plugins/snipe
 
 go 1.21
 

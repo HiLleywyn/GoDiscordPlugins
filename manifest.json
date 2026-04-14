@@ -19,15 +19,6 @@
   ],
   "plugins": [
     {
-      "name": "modlog",
-      "category": "moderation",
-      "version": "1.0.0",
-      "description": "Log moderator-relevant events (deletes, edits, joins, leaves, bans) to a channel.",
-      "author": "HiLleywyn",
-      "commands": ["modlog"],
-      "files": ["modlog.go"]
-    },
-    {
       "name": "automod",
       "category": "moderation",
       "version": "1.0.0",
@@ -35,15 +26,6 @@
       "author": "HiLleywyn",
       "commands": ["automod"],
       "files": ["automod.go"]
-    },
-    {
-      "name": "purge",
-      "category": "moderation",
-      "version": "1.0.0",
-      "description": "Bulk-delete recent messages with filters (user, bots, contains, links).",
-      "author": "HiLleywyn",
-      "commands": ["purge"],
-      "files": ["purge.go"]
     },
     {
       "name": "slowmode",
@@ -80,6 +62,15 @@
       "author": "HiLleywyn",
       "commands": ["tag"],
       "files": ["tags.go"]
+    },
+    {
+      "name": "snipe",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Recover recently deleted or edited messages in a channel.",
+      "author": "HiLleywyn",
+      "commands": ["snipe", "editsnipe"],
+      "files": ["snipe.go"]
     },
     {
       "name": "starboard",

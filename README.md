@@ -70,9 +70,7 @@ Plugins live in one of three categories. Browse by what you need:
 
 | Plugin | Command | Description |
 |--------|---------|-------------|
-| [modlog](plugins/modlog) | `!modlog` | Log deletes, edits, joins, leaves, bans, and unbans to a channel |
 | [automod](plugins/automod) | `!automod` | Filter spam, invites, excessive caps, and mass mentions |
-| [purge](plugins/purge) | `!purge` | Bulk-delete recent messages with user/content/attachment filters |
 | [slowmode](plugins/slowmode) | `!slowmode` | Auto-adjust channel slowmode based on messages per minute |
 
 ### Utility
@@ -82,6 +80,7 @@ Plugins live in one of three categories. Browse by what you need:
 | [reactionroles](plugins/reactionroles) | `!rr` | Self-assignable roles via reaction panels |
 | [reminder](plugins/reminder) | `!remindme`, `!reminders` | Personal reminders delivered in channel or by DM |
 | [tags](plugins/tags) | `!tag` | Reusable text snippets (FAQ entries, copy-pastes) |
+| [snipe](plugins/snipe) | `!snipe`, `!editsnipe` | Recover recently deleted or edited messages |
 
 ### Engagement
 
