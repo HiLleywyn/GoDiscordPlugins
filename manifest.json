@@ -30,11 +30,11 @@
       "commands": ["welcome"]
     },
     {
-      "name": "slowmode",
+      "name": "leveling",
       "version": "1.0.0",
-      "description": "Auto-adjust channel slowmode based on message rate.",
+      "description": "Message XP, levels, rank cards, leaderboard, and role rewards.",
       "author": "HiLleywyn",
-      "commands": ["slowmode"]
+      "commands": ["rank", "leaderboard", "xp"]
     }
   ]
 }

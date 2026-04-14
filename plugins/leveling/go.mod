@@ -1,4 +1,4 @@
-module github.com/hilleywyn/GoDiscordPlugins/plugins/slowmode
+module github.com/hilleywyn/GoDiscordPlugins/plugins/leveling
 
 go 1.21
 
