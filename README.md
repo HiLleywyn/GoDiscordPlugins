@@ -72,6 +72,7 @@ Plugins live in one of three categories. Browse by what you need:
 |--------|---------|-------------|
 | [automod](plugins/automod) | `!automod` | Filter spam, invites, excessive caps, and mass mentions |
 | [slowmode](plugins/slowmode) | `!slowmode` | Auto-adjust channel slowmode based on messages per minute |
+| [autorole](plugins/autorole) | `!autorole` | Auto-assign roles on member join, with optional delay |
 
 ### Utility
 
@@ -81,6 +82,9 @@ Plugins live in one of three categories. Browse by what you need:
 | [reminder](plugins/reminder) | `!remindme`, `!reminders` | Personal reminders delivered in channel or by DM |
 | [tags](plugins/tags) | `!tag` | Reusable text snippets (FAQ entries, copy-pastes) |
 | [snipe](plugins/snipe) | `!snipe`, `!editsnipe` | Recover recently deleted or edited messages |
+| [afk](plugins/afk) | `!afk` | Mark yourself AFK; bot notifies people who ping you |
+| [sticky](plugins/sticky) | `!sticky` | Keep a message pinned to the bottom of a channel |
+| [highlight](plugins/highlight) | `!highlight`, `!hl` | DM yourself when subscribed keywords appear |
 
 ### Engagement
 
@@ -92,6 +96,8 @@ Plugins live in one of three categories. Browse by what you need:
 | [welcome](plugins/welcome) | `!welcome` | Custom join and leave messages with variable substitution |
 | [leveling](plugins/leveling) | `!rank`, `!leaderboard`, `!xp` | Message XP, ranks, leaderboard, and role rewards |
 | [poll](plugins/poll) | `!poll` | Reaction-based polls with optional timed closing |
+| [suggestions](plugins/suggestions) | `!suggest`, `!suggestion` | Suggestion box with voting and status tracking |
+| [quote](plugins/quote) | `!quote` | Save memorable messages, random recall, by-author lookup |
 
 ## Manifest
 
@@ -107,7 +113,7 @@ Plugins live in one of three categories. Browse by what you need:
   ],
   "plugins": [
     {
-      "name": "modlog",
+      "name": "automod",
       "category": "moderation",
       "version": "1.0.0",
       ...

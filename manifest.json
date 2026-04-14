@@ -37,6 +37,15 @@
       "files": ["slowmode.go"]
     },
     {
+      "name": "autorole",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Assign roles automatically when a member joins.",
+      "author": "HiLleywyn",
+      "commands": ["autorole"],
+      "files": ["autorole.go"]
+    },
+    {
       "name": "reactionroles",
       "category": "utility",
       "version": "1.0.0",
@@ -71,6 +80,33 @@
       "author": "HiLleywyn",
       "commands": ["snipe", "editsnipe"],
       "files": ["snipe.go"]
+    },
+    {
+      "name": "afk",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Mark yourself AFK; the bot notifies people who ping you.",
+      "author": "HiLleywyn",
+      "commands": ["afk"],
+      "files": ["afk.go"]
+    },
+    {
+      "name": "sticky",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Keep a message pinned to the bottom of a channel.",
+      "author": "HiLleywyn",
+      "commands": ["sticky"],
+      "files": ["sticky.go"]
+    },
+    {
+      "name": "highlight",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "DM users when their subscribed keywords appear.",
+      "author": "HiLleywyn",
+      "commands": ["highlight", "hl"],
+      "files": ["highlight.go"]
     },
     {
       "name": "starboard",
@@ -125,6 +161,24 @@
       "author": "HiLleywyn",
       "commands": ["poll"],
       "files": ["poll.go"]
+    },
+    {
+      "name": "suggestions",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Suggestion box with upvote/downvote and status tracking.",
+      "author": "HiLleywyn",
+      "commands": ["suggest", "suggestion"],
+      "files": ["suggestions.go"]
+    },
+    {
+      "name": "quote",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Save memorable messages and recall them later.",
+      "author": "HiLleywyn",
+      "commands": ["quote"],
+      "files": ["quote.go"]
     }
   ]
 }
