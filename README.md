@@ -56,12 +56,69 @@ func (p *Plugin) handle(ctx *discord.CommandContext) {
 
 Config is per-guild and per-plugin. Use `api.GetConfig`, `api.SetConfig`, `api.DeleteConfig`.
 
+## Categories
+
+Plugins live in one of three categories. Browse by what you need:
+
+- **Moderation** - keep the server healthy
+- **Utility** - general-purpose tools for users and admins
+- **Engagement** - community interaction, rewards, onboarding
+
 ## Available plugins
+
+### Moderation
 
 | Plugin | Command | Description |
 |--------|---------|-------------|
-| starboard | `!starboard` | Reposts highly-starred messages to a dedicated channel |
-| autoresponder | `!ar` | Responds to trigger keywords with preset replies |
-| giveaway | `!giveaway` | Timed giveaways with reaction-based entry and winner selection |
-| welcome | `!welcome` | Custom join and leave messages with variable substitution |
-| slowmode | `!slowmode` | Auto-adjusts channel slowmode based on messages per minute |
+| [modlog](plugins/modlog) | `!modlog` | Log deletes, edits, joins, leaves, bans, and unbans to a channel |
+| [automod](plugins/automod) | `!automod` | Filter spam, invites, excessive caps, and mass mentions |
+| [purge](plugins/purge) | `!purge` | Bulk-delete recent messages with user/content/attachment filters |
+| [slowmode](plugins/slowmode) | `!slowmode` | Auto-adjust channel slowmode based on messages per minute |
+
+### Utility
+
+| Plugin | Command | Description |
+|--------|---------|-------------|
+| [reactionroles](plugins/reactionroles) | `!rr` | Self-assignable roles via reaction panels |
+| [reminder](plugins/reminder) | `!remindme`, `!reminders` | Personal reminders delivered in channel or by DM |
+| [tags](plugins/tags) | `!tag` | Reusable text snippets (FAQ entries, copy-pastes) |
+
+### Engagement
+
+| Plugin | Command | Description |
+|--------|---------|-------------|
+| [starboard](plugins/starboard) | `!starboard` | Repost highly-reacted messages to a dedicated channel |
+| [autoresponder](plugins/autoresponder) | `!ar` | Respond to trigger keywords with preset replies |
+| [giveaway](plugins/giveaway) | `!giveaway` | Timed giveaways with reaction-based entry |
+| [welcome](plugins/welcome) | `!welcome` | Custom join and leave messages with variable substitution |
+| [leveling](plugins/leveling) | `!rank`, `!leaderboard`, `!xp` | Message XP, ranks, leaderboard, and role rewards |
+| [poll](plugins/poll) | `!poll` | Reaction-based polls with optional timed closing |
+
+## Manifest
+
+`manifest.json` at the repo root enumerates every plugin in a form the Carlos `!plugin install` command can read. It now includes a top-level `categories` list and a `category` field on every plugin entry.
+
+```json
+{
+  "version": "2",
+  "categories": [
+    {"id": "moderation", "name": "Moderation", "description": "..."},
+    {"id": "utility",    "name": "Utility",    "description": "..."},
+    {"id": "engagement", "name": "Engagement", "description": "..."}
+  ],
+  "plugins": [
+    {
+      "name": "modlog",
+      "category": "moderation",
+      "version": "1.0.0",
+      ...
+    }
+  ]
+}
+```
+
+New plugins should set `category` to one of the IDs above. Proposals for new categories are welcome in a PR.
+
+## Validating locally
+
+`tools/validate.sh` walks `plugins/` and runs `go build ./...` in each module. It expects sibling checkouts of `Carlos` and `GoDiscord` two directories up (matching the `replace` directives in each plugin's `go.mod`).

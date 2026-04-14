@@ -1,8 +1,89 @@
 {
-  "version": "1",
+  "version": "2",
+  "categories": [
+    {
+      "id": "moderation",
+      "name": "Moderation",
+      "description": "Tools for enforcing server rules and keeping channels healthy."
+    },
+    {
+      "id": "utility",
+      "name": "Utility",
+      "description": "General-purpose helpers for users and admins."
+    },
+    {
+      "id": "engagement",
+      "name": "Engagement",
+      "description": "Community interaction, rewards, and onboarding."
+    }
+  ],
   "plugins": [
     {
+      "name": "modlog",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Log moderator-relevant events (deletes, edits, joins, leaves, bans) to a channel.",
+      "author": "HiLleywyn",
+      "commands": ["modlog"],
+      "files": ["modlog.go"]
+    },
+    {
+      "name": "automod",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Filter spam, Discord invites, excessive caps and mass mentions.",
+      "author": "HiLleywyn",
+      "commands": ["automod"],
+      "files": ["automod.go"]
+    },
+    {
+      "name": "purge",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Bulk-delete recent messages with filters (user, bots, contains, links).",
+      "author": "HiLleywyn",
+      "commands": ["purge"],
+      "files": ["purge.go"]
+    },
+    {
+      "name": "slowmode",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Auto-adjust channel slowmode based on messages per minute.",
+      "author": "HiLleywyn",
+      "commands": ["slowmode"],
+      "files": ["slowmode.go"]
+    },
+    {
+      "name": "reactionroles",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Self-assignable roles via reactions on a configured message.",
+      "author": "HiLleywyn",
+      "commands": ["rr"],
+      "files": ["reactionroles.go"]
+    },
+    {
+      "name": "reminder",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Personal reminders delivered by DM or in channel.",
+      "author": "HiLleywyn",
+      "commands": ["remindme", "reminders"],
+      "files": ["reminder.go"]
+    },
+    {
+      "name": "tags",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Save reusable text snippets recallable by name.",
+      "author": "HiLleywyn",
+      "commands": ["tag"],
+      "files": ["tags.go"]
+    },
+    {
       "name": "starboard",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Pin highly-reacted messages to a starboard channel.",
       "author": "HiLleywyn",
@@ -11,6 +92,7 @@
     },
     {
       "name": "autoresponder",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Respond to trigger keywords with preset replies.",
       "author": "HiLleywyn",
@@ -19,6 +101,7 @@
     },
     {
       "name": "giveaway",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Run timed giveaways with reaction-based entry.",
       "author": "HiLleywyn",
@@ -27,6 +110,7 @@
     },
     {
       "name": "welcome",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Send custom messages when members join or leave.",
       "author": "HiLleywyn",
@@ -35,11 +119,21 @@
     },
     {
       "name": "leveling",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Message XP, levels, rank cards, leaderboard, and role rewards.",
       "author": "HiLleywyn",
       "commands": ["rank", "leaderboard", "xp"],
       "files": ["leveling.go"]
+    },
+    {
+      "name": "poll",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Reaction-based polls with optional timed closing and result summary.",
+      "author": "HiLleywyn",
+      "commands": ["poll"],
+      "files": ["poll.go"]
     }
   ]
 }
