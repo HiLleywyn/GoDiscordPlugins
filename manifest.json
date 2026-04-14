@@ -1,8 +1,224 @@
 {
-  "version": "1",
+  "version": "2",
+  "categories": [
+    {
+      "id": "moderation",
+      "name": "Moderation",
+      "description": "Tools for enforcing server rules and keeping channels healthy."
+    },
+    {
+      "id": "utility",
+      "name": "Utility",
+      "description": "General-purpose helpers for users and admins."
+    },
+    {
+      "id": "engagement",
+      "name": "Engagement",
+      "description": "Community interaction, rewards, and onboarding."
+    }
+  ],
   "plugins": [
     {
+      "name": "automod",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Filter spam, Discord invites, excessive caps and mass mentions.",
+      "author": "HiLleywyn",
+      "commands": ["automod"],
+      "files": ["automod.go"]
+    },
+    {
+      "name": "slowmode",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Auto-adjust channel slowmode based on messages per minute.",
+      "author": "HiLleywyn",
+      "commands": ["slowmode"],
+      "files": ["slowmode.go"]
+    },
+    {
+      "name": "autorole",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Assign roles automatically when a member joins.",
+      "author": "HiLleywyn",
+      "commands": ["autorole"],
+      "files": ["autorole.go"]
+    },
+    {
+      "name": "raidguard",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Detect join floods and auto-kick or timeout suspected raiders.",
+      "author": "HiLleywyn",
+      "commands": ["raidguard"],
+      "files": ["raidguard.go"]
+    },
+    {
+      "name": "verify",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Gate new members behind a verification step before granting access.",
+      "author": "HiLleywyn",
+      "commands": ["verify"],
+      "files": ["verify.go"]
+    },
+    {
+      "name": "altcheck",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Flag or auto-kick accounts younger than a configured age.",
+      "author": "HiLleywyn",
+      "commands": ["altcheck"],
+      "files": ["altcheck.go"]
+    },
+    {
+      "name": "appeals",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Ban appeal inbox with approve / deny mod review workflow.",
+      "author": "HiLleywyn",
+      "commands": ["appeals", "appeal"],
+      "files": ["appeals.go"]
+    },
+    {
+      "name": "nickfilter",
+      "category": "moderation",
+      "version": "1.0.0",
+      "description": "Block hoisting, zalgo, mention-injection and banned substrings in nicknames.",
+      "author": "HiLleywyn",
+      "commands": ["nickfilter"],
+      "files": ["nickfilter.go"]
+    },
+    {
+      "name": "reactionroles",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Self-assignable roles via reactions on a configured message.",
+      "author": "HiLleywyn",
+      "commands": ["rr"],
+      "files": ["reactionroles.go"]
+    },
+    {
+      "name": "reminder",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Personal reminders delivered by DM or in channel.",
+      "author": "HiLleywyn",
+      "commands": ["remindme", "reminders"],
+      "files": ["reminder.go"]
+    },
+    {
+      "name": "tags",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Save reusable text snippets recallable by name.",
+      "author": "HiLleywyn",
+      "commands": ["tag"],
+      "files": ["tags.go"]
+    },
+    {
+      "name": "snipe",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Recover recently deleted or edited messages in a channel.",
+      "author": "HiLleywyn",
+      "commands": ["snipe", "editsnipe"],
+      "files": ["snipe.go"]
+    },
+    {
+      "name": "afk",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Mark yourself AFK; the bot notifies people who ping you.",
+      "author": "HiLleywyn",
+      "commands": ["afk"],
+      "files": ["afk.go"]
+    },
+    {
+      "name": "sticky",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Keep a message pinned to the bottom of a channel.",
+      "author": "HiLleywyn",
+      "commands": ["sticky"],
+      "files": ["sticky.go"]
+    },
+    {
+      "name": "highlight",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "DM users when their subscribed keywords appear.",
+      "author": "HiLleywyn",
+      "commands": ["highlight", "hl"],
+      "files": ["highlight.go"]
+    },
+    {
+      "name": "timezone",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Per-user timezones and a `!when` command for cross-TZ scheduling.",
+      "author": "HiLleywyn",
+      "commands": ["tz", "when"],
+      "files": ["timezone.go"]
+    },
+    {
+      "name": "embed",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Interactive embed builder for announcements and rich messages.",
+      "author": "HiLleywyn",
+      "commands": ["embed"],
+      "files": ["embed.go"]
+    },
+    {
+      "name": "customrole",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Let eligible members claim one personal role from a curated pool.",
+      "author": "HiLleywyn",
+      "commands": ["customrole", "crole"],
+      "files": ["customrole.go"]
+    },
+    {
+      "name": "todo",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Personal task lists per user, with optional due dates.",
+      "author": "HiLleywyn",
+      "commands": ["todo"],
+      "files": ["todo.go"]
+    },
+    {
+      "name": "threadkeeper",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Keep long-running threads from auto-archiving via scheduled heartbeats.",
+      "author": "HiLleywyn",
+      "commands": ["threadkeeper"],
+      "files": ["threadkeeper.go"]
+    },
+    {
+      "name": "channelexport",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Export recent channel messages as a text dump for review or archival.",
+      "author": "HiLleywyn",
+      "commands": ["channelexport", "export"],
+      "files": ["channelexport.go"]
+    },
+    {
+      "name": "backup",
+      "category": "utility",
+      "version": "1.0.0",
+      "description": "Snapshot and restore plugin configuration for a guild.",
+      "author": "HiLleywyn",
+      "commands": ["backup"],
+      "files": ["backup.go"]
+    },
+    {
       "name": "starboard",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Pin highly-reacted messages to a starboard channel.",
       "author": "HiLleywyn",
@@ -11,6 +227,7 @@
     },
     {
       "name": "autoresponder",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Respond to trigger keywords with preset replies.",
       "author": "HiLleywyn",
@@ -19,6 +236,7 @@
     },
     {
       "name": "giveaway",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Run timed giveaways with reaction-based entry.",
       "author": "HiLleywyn",
@@ -27,6 +245,7 @@
     },
     {
       "name": "welcome",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Send custom messages when members join or leave.",
       "author": "HiLleywyn",
@@ -35,11 +254,57 @@
     },
     {
       "name": "leveling",
+      "category": "engagement",
       "version": "1.0.0",
       "description": "Message XP, levels, rank cards, leaderboard, and role rewards.",
       "author": "HiLleywyn",
       "commands": ["rank", "leaderboard", "xp"],
       "files": ["leveling.go"]
+    },
+    {
+      "name": "poll",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Reaction-based polls with optional timed closing and result summary.",
+      "author": "HiLleywyn",
+      "commands": ["poll"],
+      "files": ["poll.go"]
+    },
+    {
+      "name": "suggestions",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Suggestion box with upvote/downvote and status tracking.",
+      "author": "HiLleywyn",
+      "commands": ["suggest", "suggestion"],
+      "files": ["suggestions.go"]
+    },
+    {
+      "name": "quote",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Save memorable messages and recall them later.",
+      "author": "HiLleywyn",
+      "commands": ["quote"],
+      "files": ["quote.go"]
+    },
+    {
+      "name": "birthday",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Track member birthdays, wish them happy birthday, and apply a temporary role.",
+      "author": "HiLleywyn",
+      "commands": ["birthday", "bday"],
+      "files": ["birthday.go"]
+    },
+    {
+      "name": "stats",
+      "category": "engagement",
+      "version": "1.0.0",
+      "description": "Server message activity stats with weekly digests.",
+      "author": "HiLleywyn",
+      "commands": ["stats"],
+      "files": ["stats.go"]
     }
   ]
 }
