@@ -170,7 +170,7 @@ func (p *Plugin) handleCmd(ctx *discord.CommandContext) {
 
 	// Try to send as a file attachment. Fall back to embed preview.
 	name := fmt.Sprintf("channel-%s-%s.txt", chID, time.Now().Format("20060102-150405"))
-	if err := p.api.Rest().SendFile(ctx.ChannelID, name, []byte(body), fmt.Sprintf("Exported **%d** messages from <#%s>.", count, chID)); err != nil {
+	if _, err := p.api.Rest().SendFile(ctx.ChannelID, name, []byte(body), fmt.Sprintf("Exported **%d** messages from <#%s>.", count, chID)); err != nil {
 		p.api.Log("channelexport: SendFile: %v", err)
 		preview := body
 		if len(preview) > 1800 {

@@ -254,7 +254,7 @@ func (p *Plugin) cmdExport(ctx *discord.CommandContext) {
 	}
 	name := fmt.Sprintf("backup-%s-%s.json", s.GuildID, s.ID)
 	caption := fmt.Sprintf("Backup `%s` (%d entries)", s.ID, len(s.Config))
-	if err := p.api.Rest().SendFile(ctx.ChannelID, name, body, caption); err != nil {
+	if _, err := p.api.Rest().SendFile(ctx.ChannelID, name, body, caption); err != nil {
 		p.api.Log("backup: SendFile: %v", err)
 		ctx.Reply("Failed to upload file: " + err.Error())
 	}

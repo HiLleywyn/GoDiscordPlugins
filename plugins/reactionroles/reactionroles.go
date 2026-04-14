@@ -320,7 +320,8 @@ func (p *Plugin) rerenderPanel(bot *discord.Bot, name string, pnl *panelData) er
 	if pnl.ChannelID == "" || pnl.MessageID == "" {
 		return nil
 	}
-	return bot.Rest.EditEmbed(pnl.ChannelID, pnl.MessageID, buildEmbed(pnl))
+	_, err := bot.Rest.EditEmbed(pnl.ChannelID, pnl.MessageID, buildEmbed(pnl))
+	return err
 }
 
 func buildEmbed(pnl *panelData) discord.Embed {

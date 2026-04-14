@@ -121,7 +121,7 @@ func (p *Plugin) deliver(rest *discord.RestClient, guildID string, r *reminderDa
 	text := fmt.Sprintf("<@%s> reminder: %s", r.UserID, r.Note)
 
 	if r.DM {
-		if err := rest.SendDM(r.UserID, text); err == nil {
+		if _, err := rest.SendDM(r.UserID, text); err == nil {
 			return
 		}
 		// Fall through to channel delivery if DM failed (user has DMs off).

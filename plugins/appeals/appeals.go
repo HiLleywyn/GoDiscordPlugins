@@ -207,7 +207,7 @@ func (p *Plugin) cmdDecision(ctx *discord.CommandContext, status string) {
 
 	// Update the embed in the mod channel.
 	if ad.ChannelID != "" && ad.MessageID != "" {
-		if err := ctx.Bot.Rest.EditEmbed(ad.ChannelID, ad.MessageID, renderAppeal(ad)); err != nil {
+		if _, err := ctx.Bot.Rest.EditEmbed(ad.ChannelID, ad.MessageID, renderAppeal(ad)); err != nil {
 			p.api.Log("appeals: edit embed: %v", err)
 		}
 	}
@@ -217,7 +217,7 @@ func (p *Plugin) cmdDecision(ctx *discord.CommandContext, status string) {
 	if ad.ModNote != "" {
 		dm += "\nMod note: " + ad.ModNote
 	}
-	if err := ctx.Bot.Rest.SendDM(ad.UserID, dm); err != nil {
+	if _, err := ctx.Bot.Rest.SendDM(ad.UserID, dm); err != nil {
 		p.api.Log("appeals: dm %s: %v", ad.UserID, err)
 	}
 	ctx.Reply(fmt.Sprintf("Appeal **#%d** %s.", ad.ID, status))

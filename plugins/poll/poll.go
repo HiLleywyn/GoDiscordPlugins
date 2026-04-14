@@ -277,7 +277,7 @@ func (p *Plugin) finish(pd *pollData) {
 		}
 	}
 
-	if err := rest.EditEmbed(pd.ChannelID, pd.MessageID, renderPoll(pd, tallies)); err != nil {
+	if _, err := rest.EditEmbed(pd.ChannelID, pd.MessageID, renderPoll(pd, tallies)); err != nil {
 		p.api.Log("poll: edit embed: %v", err)
 	}
 	pd.Ended = true

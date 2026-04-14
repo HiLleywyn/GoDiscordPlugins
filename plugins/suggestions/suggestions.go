@@ -212,7 +212,7 @@ func (p *Plugin) setStatus(ctx *discord.CommandContext, status string) {
 	}
 	p.save(ctx.GuildID, sug)
 
-	if err := ctx.Bot.Rest.EditEmbed(sug.ChannelID, sug.MessageID, renderSuggestion(sug)); err != nil {
+	if _, err := ctx.Bot.Rest.EditEmbed(sug.ChannelID, sug.MessageID, renderSuggestion(sug)); err != nil {
 		p.api.Log("suggestions: edit embed: %v", err)
 	}
 	ctx.Reply(fmt.Sprintf("Suggestion **#%d** marked as %s.", id, status))

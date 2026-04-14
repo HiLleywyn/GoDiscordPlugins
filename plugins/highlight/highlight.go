@@ -308,7 +308,7 @@ func (p *Plugin) fire(bot *discord.Bot, msg *discord.Message, userID, keyword st
 		"Highlight **%s** in <#%s>\nFrom <@%s>: %s",
 		keyword, msg.ChannelID, msg.Author.ID, snippet,
 	)
-	if err := bot.Rest.SendDM(userID, text); err != nil {
+	if _, err := bot.Rest.SendDM(userID, text); err != nil {
 		p.api.Log("highlight: dm %s: %v", userID, err)
 	}
 }

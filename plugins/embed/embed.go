@@ -198,7 +198,7 @@ func (p *Plugin) handleCmd(ctx *discord.CommandContext) {
 			return
 		}
 		msgID := ctx.Args[2]
-		if err := ctx.Bot.Rest.EditEmbed(chID, msgID, toEmbed(d)); err != nil {
+		if _, err := ctx.Bot.Rest.EditEmbed(chID, msgID, toEmbed(d)); err != nil {
 			ctx.Reply("Edit failed: " + err.Error())
 			return
 		}
