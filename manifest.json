@@ -6,35 +6,40 @@
       "version": "1.0.0",
       "description": "Pin highly-reacted messages to a starboard channel.",
       "author": "HiLleywyn",
-      "commands": ["starboard"]
+      "commands": ["starboard"],
+      "files": ["starboard.go"]
     },
     {
       "name": "autoresponder",
       "version": "1.0.0",
       "description": "Respond to trigger keywords with preset replies.",
       "author": "HiLleywyn",
-      "commands": ["ar"]
+      "commands": ["ar"],
+      "files": ["autoresponder.go"]
     },
     {
       "name": "giveaway",
       "version": "1.0.0",
       "description": "Run timed giveaways with reaction-based entry.",
       "author": "HiLleywyn",
-      "commands": ["giveaway"]
+      "commands": ["giveaway"],
+      "files": ["giveaway.go"]
     },
     {
       "name": "welcome",
       "version": "1.0.0",
       "description": "Send custom messages when members join or leave.",
       "author": "HiLleywyn",
-      "commands": ["welcome"]
+      "commands": ["welcome"],
+      "files": ["welcome.go"]
     },
     {
       "name": "leveling",
       "version": "1.0.0",
       "description": "Message XP, levels, rank cards, leaderboard, and role rewards.",
       "author": "HiLleywyn",
-      "commands": ["rank", "leaderboard", "xp"]
+      "commands": ["rank", "leaderboard", "xp"],
+      "files": ["leveling.go"]
     }
   ]
 }
