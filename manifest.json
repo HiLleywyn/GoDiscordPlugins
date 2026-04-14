@@ -1,0 +1,40 @@
+{
+  "version": "1",
+  "plugins": [
+    {
+      "name": "starboard",
+      "version": "1.0.0",
+      "description": "Pin highly-reacted messages to a starboard channel.",
+      "author": "HiLleywyn",
+      "commands": ["starboard"]
+    },
+    {
+      "name": "autoresponder",
+      "version": "1.0.0",
+      "description": "Respond to trigger keywords with preset replies.",
+      "author": "HiLleywyn",
+      "commands": ["ar"]
+    },
+    {
+      "name": "giveaway",
+      "version": "1.0.0",
+      "description": "Run timed giveaways with reaction-based entry.",
+      "author": "HiLleywyn",
+      "commands": ["giveaway"]
+    },
+    {
+      "name": "welcome",
+      "version": "1.0.0",
+      "description": "Send custom messages when members join or leave.",
+      "author": "HiLleywyn",
+      "commands": ["welcome"]
+    },
+    {
+      "name": "slowmode",
+      "version": "1.0.0",
+      "description": "Auto-adjust channel slowmode based on message rate.",
+      "author": "HiLleywyn",
+      "commands": ["slowmode"]
+    }
+  ]
+}
