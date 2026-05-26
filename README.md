@@ -1,6 +1,6 @@
 # GoDiscordPlugins
 
-Plugin collection for the [Carlos](https://github.com/hilleywyn/Carlos) Discord bot.
+Plugin collection, mainly for the [Carlos](https://github.com/hilleywyn/Carlos) Discord bot, but usable across any bot using the [GoDiscord](https://github.com/HiLleywyn/GoDiscord) framework.
 
 ## What is this
 
